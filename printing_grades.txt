@@ -1,4 +1,10 @@
-Design a solution algorithm that will read a file of student test results and produce a student test grades report. Each test record contains the student number, name and test score (out of 50). The program is to calculate for each student the test score as a percentage and to print the student’s number, name, test score (out of 50) and letter grade on the report.
+﻿Design a solution algorithm that will read a file of student test results 
+and produce a student test grades report. 
+Each test record contains the student number, name and test score (out of 50). 
+The program is to calculate for each student the test score as a percentage 
+and to print the student’s number, name, test score (out of 50) 
+and letter grade on the report.
+
 The letter grade is determined as follows:
 A = 90–100%
 B = 80–89%
@@ -12,11 +18,11 @@ student_number
 student_name
 test_score_out_of_50
 
-PROCESSING STEPS
+PROCESSING STEPS/ALGORITHM
 Print Student Test Grades Report heading
 Read student test grades report
-Divide test_score_out_of_50 by 50 to get test_score_as_percentage
-Compare percentage to select letter grade
+Divide test_score_out_of_50 by 50 to get test_score_as_percentage for each student
+Compare percentage to select letter grade for each student
 
 OUTPUTS
 Student Test Grades Report heading
@@ -26,18 +32,25 @@ test_score_out_of_50
 letter_grade
 
 PSEUDOCODE
-Print_Sales_Report
-Print "Sales Report" heading
+Print_Student_Test_Grades_Report
+Print "Student Test Grades Report" heading
     Read student test grades record
-	IF 
-	
-	ELSE IF 
-	
-	ELSE IF 
-	
-	ENDIF	
 	DOWHILE morerecords exist
+		Calculate test_score_as_percentage = (test_score_out_of_50 / 50) * 100
+		IF test_score_as_percentage >= 90 AND test_score_as_percentage <= 100
+			Set letter_grade to A
+		ELSE IF test_score_as_percentage >= 80 AND test_score_as_percentage <= 89
+			Set letter_grade to B
+		ELSE IF test_score_as_percentage >= 70 AND test_score_as_percentage <= 79
+			Set letter_grade to C
+		ELSE IF test_score_as_percentage >= 60 AND test_score_as_percentage <= 69
+			Set letter_grade to D
+		ELSE IF test_score_as_percentage >= 0 AND test_score_as_percentage <= 59
+			Set letter_grade to F
+		ENDIF
+	
         Print student_number, student_name, test_score_out_of_50, letter_grade
 		Read student test grades record	
     ENDDO
 END
+-------------------------------------------------------------------------------------------
